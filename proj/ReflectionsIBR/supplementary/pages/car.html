@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Image-Based Rendering for Scenes with Reflections - Supplementary Material</title>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<style type="text/css">
+	html, body, #wrapper
+	{
+		background-color: #222222;
+		color: #eeeeee;
+		font-family: Arial, Helvetica, sans-serif;
+		text-align: center;
+		margin: 0;
+		padding: 0;
+	}
+	
+	body {
+		background: url("../bg.png");
+	}
+
+	img
+	{
+		border: 0;
+	}
+	
+	td
+	{
+		text-align: center;
+		font-variant: small-caps;
+		padding: 5px;
+	}
+	
+	.section
+	{
+		font-size: 40px;
+		font-weight: bold;
+		text-align: center;
+		margin-top: 10px;
+	}
+	
+	.subsection
+	{
+		font-weight: bold;
+		text-align: center;
+		margin-top: 30px;
+		margin-bottom: 10px;
+	}
+	
+	.selector
+	{
+		text-decoration: underline;
+		color: #4488ff;
+	}
+	
+	.selected
+	{
+		color: red;
+	}
+
+	a:link {color: #4488ff; text-decoration: underline; }
+	a:active {color: #4488ff; text-decoration: underline; }
+	a:visited {color: #4488ff; text-decoration: underline; }
+	a:hover {color: #ff0000; text-decoration: none; }
+</style>
+
+<script>
+	function showResult(name, type)
+	{		
+		var types = ["original", "layer1", "layer2", "beta", "1or2depths", "1or2layers", "planelabeling", "depthmap1", "depthmap2"];
+		var titles = ["Original Image", "Front Layer", "Rear Layer", "Beta Mask", "1 or 2 Depths", "1 or 2 layers", "Plane (or Plane-pair) Labeling", "Front Layer Depth Map", "Rear Layer Depth Map"];
+		var img = document.getElementById("img");
+		if (img)
+		{
+			img.src = "figures/"+name+"-"+type+".jpg";
+		}
+		for (i = 0; i < types.length; i++)
+		{
+			document.getElementById("lnk_"+types[i]).className = "selector";
+			
+			if (types[i] == type)
+			{
+				document.getElementById("seltitle").innerHTML = titles[i];
+			}
+		}
+		document.getElementById("lnk_"+type).className = "selected";
+		}
+</script>
+
+</head>
+<body>
+
+<center>
+	
+<div class="section">Car Sequence</div>
+
+<div class="subsection">Layer separation results for one of the input images</div>
+
+<table>
+<tr>
+	<td id="lnk_original" class="selector" onmouseover="showResult('car', 'original');">Original Image</div></td>
+	<td id="lnk_layer1" class="selector" onmouseover="showResult('car', 'layer1');">Front Layer</div></td>
+	<td id="lnk_layer2" class="selector" onmouseover="showResult('car', 'layer2');">Rear Layer</div></td>
+	<td id="lnk_beta" class="selected" onmouseover="showResult('car', 'beta');">Beta Mask</div></td>
+</tr>
+</table>
+
+<table>
+<tr>
+	<td id="lnk_1or2depths" class="selector" onmouseover="showResult('car', '1or2depths');">1 or 2 Depths</div></td>
+	<td id="lnk_1or2layers" class="selector" onmouseover="showResult('car', '1or2layers');">1 or 2 layers</div></td>
+	<td id="lnk_planelabeling" class="selector" onmouseover="showResult('car', 'planelabeling');">Plane (or Plane-pair) Labeling</div></td>
+</tr>
+</table>
+
+<table>
+<tr>
+	<td id="lnk_depthmap1" class="selector" onmouseover="showResult('car', 'depthmap1');">Front Layer Depth Map</div></td>
+	<td id="lnk_depthmap2" class="selector" onmouseover="showResult('car', 'depthmap2');">Rear Layer Depth Map</div></td>
+</tr>
+</table>
+
+<table>
+<tr>
+	<td><img id="imgorig" src="figures/car-original.jpg"><br>Original Image</td>
+	<td><img id="img" src="figures/car-beta.jpg"><br><div id="seltitle">Beta Mask</div></td>
+</tr>
+</table>
+
+<div class="subsection">Stabilized Image Stacks (Animation)</div>
+
+<table>
+<tr>
+	<td>
+		<video width="640" height="480" controls="controls" onended="this.currentTime = 0; this.play();">
+			<source src="stacks/car_front.mp4" type="video/mp4"/>
+			<source src="stacks/car_front.webm" type="video/webm"/>
+		</video><br>
+		Front Layer
+	</td>
+	<td>
+		<video width="640" height="480" controls="controls" onended="this.currentTime = 0; this.play();">
+			<source src="stacks/car_rear.mp4" type="video/mp4"/>
+			<source src="stacks/car_rear.webm" type="video/webm"/>
+		</video><br>
+		Rear Layer
+	</td>
+</tr>
+</table>
+
+<div class="subsection">Results (Animation)</div>
+
+<table>
+<tr>
+	<td>
+		<video width="720" height="480" controls="controls" onended="this.currentTime = 0; this.play();">
+			<source src="videos/car.mp4" type="video/mp4"/>
+			<source src="videos/car.webm" type="video/webm"/>
+		</video><br>
+		Two Layer Rendering
+	</td>
+</tr>
+<tr><td>&nbsp;</td></tr>
+<tr>
+	<td>
+		<video width="720" height="480" controls="controls" onended="this.currentTime = 0; this.play();">
+			<source src="videos/car_noreflections.mp4" type="video/mp4"/>
+			<source src="videos/car_noreflections.webm" type="video/webm"/>
+		</video><br>
+		Single Layer Rendering
+	</td>
+</tr>
+</table>
+
+<br>
+<br>
+
+</body>
+</html>

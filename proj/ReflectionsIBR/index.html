@@ -1,0 +1,170 @@
+<html>
+<head>
+	<link rel=StyleSheet Type="text/css" href="style.css">
+	<title>Image-Based Rendering for Scenes with Reflections</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<body>
+
+<center>
+
+<br>
+
+<table>
+<tr>
+	<td colspan='99' align='center' class='small'><a href='http://research.microsoft.com/en-us/groups/interactivevisualmedia/'>Back to group page</a></td>
+</tr>
+</table>
+
+<br>
+
+<table>
+<tr>
+	<td colspan='99' align='center' class='medium'>SIGGRAPH 2012</td>
+</tr>
+</table>
+
+<br>
+
+<table>
+<tr>
+	<td colspan='99' align='center' class='title'><img src="images/title.png"></td>
+</tr>
+</table>
+
+<br>
+
+<table>
+<tr>
+	<td align='center' class='author'><a href='http://research.microsoft.com/en-us/people/sudipsin/' target='new'>Sudipta N. Sinha</a></td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td align='center' class='author'><a href='http://research.microsoft.com/en-us/people/kopf/' target='new'>Johannes Kopf</a></td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td align='center' class='author'><a href='http://www.gris.informatik.tu-darmstadt.de/~mgoesele/' target='new'>Michael Goesele</a></td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td align='center' class='author'><a href='http://www.cs.middlebury.edu/~schar/' target='new'>Daniel Scharstein</a></td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td align='center' class='author'><a href='http://research.microsoft.com/en-us/um/people/szeliski/' target='new'>Richard Szeliski</a></td>
+</tr>
+<tr>
+	<td align='center' class='affiliation'>Microsoft Research</td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td align='center' class='affiliation'>Microsoft Research</td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td align='center' class='affiliation'>TU Darmstadt</td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td align='center' class='affiliation'>Middlebury College</td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td align='center' class='affiliation'>Microsoft Research</td>
+</tr>
+</table>
+
+<br>
+
+<table width="80">
+<tr>
+	<td><img src="images/teaser2.jpg" border="0" style="margin-bottom: 10px;"></td>
+</tr>
+<tr>
+	<td>
+	Two-layer decomposition for the <span style="font-variant: small-caps;">Guitarist</span> image sequence.
+	From left to right:
+	sample input image,
+	its decomposition into the front and rear layers,
+	detail from an interpolated view using the one-layer model, and
+	using a two-layer model.
+Notice how the one-layer rendering shows significant ghosting (doubled edges).
+	</td>
+</tr>
+</table>
+
+<br>
+<br>
+
+<iframe width="640" height="480" src="http://www.youtube.com/embed/mRYtKJqcAU0" frameborder="0" allowfullscreen></iframe>
+
+<br>
+<br>
+
+<table width="850">
+<tr>
+	<td valign="top">
+		<b>Abstract</b><br><br>
+We present a system for image-based modeling and rendering
+of real-world scenes containing reflective and glossy surfaces.
+Previous approaches to image-based rendering assume that the scene can
+be approximated by 3D proxies that enable view interpolation
+using traditional back-to-front or z-buffer compositing.
+In this work, we show how these can be generalized to multiple layers
+that are combined in an additive fashion to model the reflection and
+transmission of light that occurs at specular surfaces such as glass
+and glossy materials.
+To simplify the analysis and rendering stages, we model the world using
+piecewise-planar layers combined using both
+additive and opaque mixing of light.
+We also introduce novel techniques for estimating multiple depths in the
+scene and separating the reflection and transmission components into
+different layers.
+We then use our system to model and render a variety of
+real-world scenes with reflections.
+
+		<pre>
+@article{Sinha2012,
+    author  = {Sudipta Sinha and Johannes Kopf and Michael Goesele
+               and Daniel Scharstein and Richard Szeliski},
+    title   = {Image-Based Rendering for Scenes with Reflections},
+    journal = {ACM Transactions on Graphics (Proceedings of SIGGRAPH 2012)},
+    year    = {2012},
+    volume  = {31},
+    number  = {4},
+    pages   = {to appear}
+}
+		</pre>
+
+	</td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td width="250" align="right" valign="top">
+		<table>
+		<tr>
+			<td><a href="paper/Sinha-IBRSR-SG2012b.pdf" target="lppap"><img src="images/icon_paper.png" border="0"></a></td>
+			<td>
+				<b>Paper</b><br>
+				<a href="paper/Sinha-IBRSR-SG2012b.pdf" target="lppap" class="rightlink">Click here</a><br>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="video/reflections.mp4"><img src="images/icon_video.png" border="0"></a></td>
+			<td>
+				<b>Supplementary&nbsp;Video</b><br>
+				<a href="video/reflections.mp4" class="rightlink">Click here</a>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="supplementary/index.html"><img src="images/icon_supplementary.png" border="0"></a></td>
+			<td>
+				<b>Supplementary&nbsp;Material</b><br>
+				<a href="supplementary/index.html" class="rightlink">Click here</a>
+			</td>
+		</tr>
+		<tr>
+			<td><a href="download/index.html"><img src="images/icon_d.png" border="0"></a></td>
+			<td>
+				<b>Download Data</b><br>
+				<a href="download/index.html" class="rightlink">Click here</a>
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+
+<br>
+
+<table>
+<tr>
+	<td colspan='99' align='center' class='small'><a href='http://research.microsoft.com/en-us/groups/interactivevisualmedia/'>Back to projects page</a></td>
+</tr>
+</table>
+
+</body>
+</html>

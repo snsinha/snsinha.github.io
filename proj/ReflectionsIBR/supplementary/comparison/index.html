@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Image-Based Rendering for Scenes with Reflections - Comparison with [Szeliski 2000]</title>
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<style type="text/css">
+	html, body, #wrapper
+	{
+		background-color: #222222;
+		color: #eeeeee;
+		font-family: Arial, Helvetica, sans-serif;
+		text-align: center;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		overflow:auto;
+	}
+	
+	body {
+		background-image: url("bg.png");
+		overflow: auto;
+	}
+
+	img
+	{
+		border: 0;
+	}
+	
+	td
+	{
+		text-align: center;
+		font-variant: small-caps;
+		padding: 5px;
+	}
+	
+	.section
+	{
+		font-size: 40px;
+		font-weight: bold;
+		text-align: center;
+		margin-top: 10px;
+	}
+	
+	.subsection
+	{
+		font-size: 28px;
+		font-weight: bold;
+		text-align: center;
+		margin-top: 20px;
+	}
+	
+	.subsubsection
+	{
+		font-size: 20px;
+		font-weight: bold;
+		text-align: center;
+		margin-top: 20px;
+	}
+	
+	.navselected
+	{
+		color: #ff0000;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	
+	.navunselected
+	{
+		color: #4488ff;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	
+	.selector
+	{
+		text-decoration: underline;
+		color: #4488ff;
+	}
+	
+	.selected
+	{
+		color: red;
+	}
+	
+	a:link {color: #4488ff; text-decoration: underline; }
+	a:active {color: #4488ff; text-decoration: underline; }
+	a:visited {color: #4488ff; text-decoration: underline; }
+	a:hover {color: #ff0000; text-decoration: none; }
+</style>
+
+<script>
+	function showResult(number, name, type)
+	{		
+		var types = ["ours", "szeliski2000"];
+		var titles = ["[Layer separation - Proposed method]", "[Layer separation - Szeliski 2000]"];
+		var img = document.getElementById("img"+number);
+		if (img)
+		{
+			img.src = "figure-comp/"+name+"-"+type+".jpg";
+		}
+		for (i = 0; i < types.length; i++)
+		{
+			document.getElementById("lnk"+number+"_"+types[i]).className = "selector";
+			
+			if (types[i] == type)
+			{
+				document.getElementById("seltitle"+number).innerHTML = titles[i];
+			}
+		}
+		document.getElementById("lnk"+number+"_"+type).className = "selected";
+		}
+</script>
+
+</head>
+<body>
+
+<center>
+
+<div class="section">Image-Based Rendering for Scenes with Reflections</div>
+<div class="subsubsection">Comparison of our layer separation results with <a href="http://research.microsoft.com/apps/pubs/default.aspx?id=75686">[Szeliski 2000]</a></div>
+
+<br>
+<hr />
+<br>
+
+<div class="subsection">Guitarist Sequence</div>
+<table>
+<tr>
+	<td id="lnk0_ours" class="selected" onmouseover="showResult('0','guitarist', 'ours');">[Proposed Method]</div></td>
+</tr>
+<tr>
+	<td id="lnk0_szeliski2000" class="selector" onmouseover="showResult('0','guitarist', 'szeliski2000');">[Szeliski 2000]</div></td>
+</tr>
+<tr>
+	<td><img id="imgorig0" src="figure-comp/guitarist-original.jpg" style="border:2px solid white"><br>Original Image</td>
+	<td><img id="img0" src="figure-comp/guitarist-ours.jpg"><br><div id="seltitle0">Proposed Method</div></td>
+</tr>
+</table>
+
+<br>
+<hr />
+<br>
+
+<div class="subsection">Glass Case Sequence</div>
+<table>
+<tr>
+	<td id="lnk1_ours" class="selected" onmouseover="showResult('1','museum', 'ours');">[Proposed Method]</div></td>
+</tr>
+<tr>
+	<td id="lnk1_szeliski2000" class="selector" onmouseover="showResult('1','museum', 'szeliski2000');">[Szeliski 2000]</div></td>
+</tr>
+<tr>
+	<td><img id="imgorig1" src="figure-comp/museum-original.jpg" style="border:2px solid white"><br>Original Image</td>
+	<td><img id="img1" src="figure-comp/museum-ours.jpg"><br><div id="seltitle1">Proposed Method</div></td>
+</tr>
+</table>
+
+<br>
+<hr />
+<br>
+
+<div class="subsection">Gallery Sequence</div>
+<table>
+<tr>
+	<td id="lnk2_ours" class="selected" onmouseover="showResult('2','gallery', 'ours');">[Proposed Method]</div></td>
+</tr>
+<tr>
+	<td id="lnk2_szeliski2000" class="selector" onmouseover="showResult('2','gallery', 'szeliski2000');">[Szeliski 2000]</div></td>
+</tr>
+<tr>
+	<td><img id="imgorig2" src="figure-comp/gallery-original.jpg" style="border:2px solid white"><br>Original Image</td>
+	<td><img id="img2" src="figure-comp/gallery-ours.jpg"><br><div id="seltitle2">Proposed Method</div></td>
+</tr>
+</table>
+
+<br>
+<hr />
+<br>
+
+<div class="subsection">Statue Sequence</div>
+<table>
+<tr>
+	<td id="lnk3_ours" class="selected" onmouseover="showResult('3','statue', 'ours');">[Proposed Method]</div></td>
+</tr>
+<tr>
+	<td id="lnk3_szeliski2000" class="selector" onmouseover="showResult('3','statue', 'szeliski2000');">[Szeliski 2000]</div></td>
+</tr>
+<tr>
+	<td><img id="imgorig3" src="figure-comp/statue-original.jpg" style="border:2px solid white"><br>Original Image</td>
+	<td><img id="img3" src="figure-comp/statue-ours.jpg"><br><div id="seltitle3">Proposed Method</div></td>
+</tr>
+</table>
+
+
+<br>
+<hr />
+<br>
+
+<div class="subsection">Table Sequence</div>
+<table>
+<tr>
+	<td id="lnk4_ours" class="selected" onmouseover="showResult('4','table', 'ours');">[Proposed Method]</div></td>
+</tr>
+<tr>
+	<td id="lnk4_szeliski2000" class="selector" onmouseover="showResult('4','table', 'szeliski2000');">[Szeliski 2000]</div></td>
+</tr>
+<tr>
+	<td><img id="imgorig4" src="figure-comp/table-original.jpg" style="border:2px solid white"><br>Original Image</td>
+	<td><img id="img4" src="figure-comp/table-ours.jpg"><br><div id="seltitle4">Proposed Method</div></td>
+</tr>
+</table>
+
+
+
+<br>
+<hr />
+<br>
+
+<div class="subsection">Car Sequence</div>
+<table>
+<tr>
+	<td id="lnk5_ours" class="selected" onmouseover="showResult('5','car', 'ours');">[Proposed Method]</div></td>
+</tr>
+<tr>
+	<td id="lnk5_szeliski2000" class="selector" onmouseover="showResult('5','car', 'szeliski2000');">[Szeliski 2000]</div></td>
+</tr>
+<tr>
+	<td><img id="imgorig5" src="figure-comp/car-original.jpg" style="border:2px solid white"><br>Original Image</td>
+	<td><img id="img5" src="figure-comp/car-ours.jpg"><br><div id="seltitle5">Proposed Method</div></td>
+</tr>
+</table>
+
+
+
+</body>
+</html>
