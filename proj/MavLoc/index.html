@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>Monocular Localization of a moving person onboard a Quadrotor MAV</title></head>
+<body>
+<table style="font-family: Times New Roman,Times,serif; width: 1000px; height: 900px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="20" cellspacing="0">
+<tbody>
+<tr>
+<td colspan="2" rowspan="1"><div style="text-align: center;">
+</div><h1 style="font-weight: normal; text-align: center;"><b>Monocular Localization of a moving person onboard a Quadrotor MAV</b><small>
+</small></h1><div style="text-align: center;"><span style="font-size: 16pt;" lang="EN-US"><o:p></o:p></span><big><a href="http://icsl.snu.ac.kr/~hyonlim/">Hyon Lim</a><small><small><small>1</small></small></small>&nbsp; <a href="http://research.microsoft.com/en-us/people/sudipsin/" target="_blank">Sudipta N. Sinha</a><small><small><small>2</small></small></small>&nbsp;<br><small><small><small>1</small></small></small>Seoul National University, South Korea
+<br><small><small><small>2</small></small></small>Microsoft Research Redmond, USA&nbsp;
+<br><br>ICRA 2015<br><br></big></div>
+</td>
+</tr>
+<tr>
+<td rowspan="1" style="text-align: center;">
+<!--
+-->
+&nbsp;
+<iframe width="560" height="315" src="//www.youtube.com/embed/X8ai8tRGeNs" frameborder="0" allowfullscreen></iframe>
+&nbsp;
+</td>
+<td>
+&nbsp;
+<iframe width="560" height="315" src="//www.youtube.com/embed/YTU6ro3jguY" frameborder="0" allowfullscreen></iframe>
+&nbsp;
+</td>
+</tr>
+<tr>
+<td><span style="font-weight: bold;"><font size=5>Abstract</font><br>&nbsp;<br></span>
+In this paper, we propose a novel method to recover the 3D trajectory of a moving
+person from a monocular camera mounted on a quadrotor micro aerial vehicle (MAV).
+The key contribution is an integrated approach that simultaneously performs visual
+odometry (VO) and persistent tracking of a person automatically detected in the
+scene. All computation pertaining to VO, detection and tracking runs onboard the
+MAV from a front-facing monocular RGB camera. Given the gravity direction from an
+inertial sensor and the knowledge of the individual's height, a complete 3D trajectory
+of the person within the reconstructed scene can be estimated. When the ground plane
+is detected from the triangulated 3D points, the absolute metric scale of the
+trajectory and the 3D map is also recovered. Our extensive indoor and outdoor
+experiments show that the system can localize a person moving naturally within a
+large area. The system runs at 17 frames per second on the onboard computer. A
+walking person was successfully tracked for two minutes and an accurate trajectory
+was recovered over a distance of 140 meters with our system running onboard.
+<br><span style="font-size: 11pt; line-height: 115%;" lang="EN-US"></span></td><td style="text-align: center; width: 350px; vertical-align: middle;"> <br><br>
+<img style="width: 292px;" alt="paper" src="image001.png"><br><div style="text-align: center;">
+<a href="lim-icra2015.pdf" target="_blank">[PDF]</a> <a href="bibtex.txt" target="_blank">[Bibtex]</a> 
+<br></div></td>
+</tr>
+<tr>
+<td colspan=2>
+<span style="font-weight: bold;"><font size=5>Dataset download</font><br>&nbsp;<br></span>
+<b>About the dataset</b><br><br>
+This dataset contains image sequences, AHRS data, ground truth bounding box annotations (GTBB) of a person observed from the camera onboard the MAV.<br>
+We provide the following sequences used in the evaluation reported in the paper.
+<br><br>
+<font face="courier">
+mfly-o6 &nbsp; &nbsp; &nbsp; [<a href="mfly-o6.zip">download</a>]<br>
+mfly-o7  &nbsp; &nbsp; &nbsp; [<a href="mfly-o7.zip">download</a>]<br>
+mfly-o8  &nbsp; &nbsp; &nbsp; [<a href="mfly-o8.zip">download</a>]<br>
+mfly-o9 &nbsp; &nbsp; &nbsp; [<a href="mfly-o9.zip">download</a>]<br>
+walk-i4 &nbsp; &nbsp; &nbsp; [<a href="walk-i4.zip">download</a>]<br>
+walk-i5 &nbsp; &nbsp; &nbsp; [<a href="walk-i5.zip">download</a>]<br>
+walk-o1  &nbsp; &nbsp; &nbsp; [<a href="walk-o1.zip">download</a>]<br>
+walk-o2 &nbsp; &nbsp; &nbsp; [<a href="walk-o2.zip">download</a>]<br>
+walk-o3 &nbsp; &nbsp; &nbsp; [<a href="walk-o3.zip">download</a>]<br>
+</font>
+<br>
+<b>File format</b><br><br>
+Each directory contains the following files.
+<br><br>
+<font face="courier">
+gtbb.txt <br>
+imu.txt<br>
+[frame_number].png<br>
+</font>
+<br>
+<b>Ground truth bounding box annotations</b><br><br>
+Each line of the gtbb.txt file stores the 2d bounding box position -- [left, top, width, height] for each frame. Here is an example.
+<br><br>
+<font face="courier">
+252,203,56,137<br>
+</font>
+<br>
+This indicates that the top-left corner of the bounding box is at pixel (252,203) and the width and height of the bounding box is 56 and 137 pixels respectively.
+The line number indicates the frame number.
+<br><br>
+<b>IMU information</b><br>
+<br>
+Each line of the imu.txt file contains the following information.
+<br><br>
+<font face="courier">
+[frame number] , [time of frame captured / millisecond] , [time of IMU captured / millisecond], [roll / degree], [pitch / degree], [yaw / degree]
+</font>
+<br><br>
+The frame number is directly associated in one-to-one fashion with the image files.
+</td>
+</tr>
+</tbody>
+</table>
+<br style="font-family: Times New Roman,Times,serif;">
+</body></html>

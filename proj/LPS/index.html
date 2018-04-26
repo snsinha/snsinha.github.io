@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title>Efficient High-Resolution Stereo Matching using Local Plane Sweeps</title>
+    <link href="Deep%20Photo%20Model-Based%20Photograph%20Enhancement%20and%20Viewing_files/style.css"
+        type="text/css" rel="StyleSheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta content="MSHTML 6.00.2900.2180" name="GENERATOR">
+    <meta content="Sudipta N. Sinha" name="author">
+    <meta content="Computer Vision, Computer Graphics" name="description">
+</head>
+<body>
+    <center>
+        <br>
+        <table>
+            <tbody>
+                <tr align="center">
+                </tr>
+                <tr>
+                    <td colspan="99" align="center">
+                        <h4>
+                            To appear at CVPR 2014</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="99" align="center">
+                        <h3>
+                            Efficient High-Resolution Stereo Matching using Local Plane Sweeps<br>
+                        </h3>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <tr>
+                <td align='center'>
+                    <h4>
+                        <a href='http://research.microsoft.com/~sudipsin' target='new'>Sudipta N. Sinha</a><br>
+                    Microsoft Research
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;
+                </td>
+                <td align='center'>
+                    <h4>
+                        <a href='http://www.cs.middlebury.edu/~schar/' target='new'>Daniel Scharstein</a><br>
+                    Middlebury College
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;
+                </td>
+                <td align='center'>
+                    <h4>
+                        <a href='http://research.microsoft.com/~szeliski' target='new'>Richard Szeliski</a><br>
+                    Microsoft Research
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <a href="lps_teaser.png"><img border="none" style="width: 500px; height: 350px;" src="lps_teaser.png"></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <tbody>
+                <tr>
+                    <td style="text-align: justify;" valign="top" width="640">
+                        <a href="sinhaLPS_CVPR2014.pdf">[pdf]</a>
+                        <br><br>
+                        <a href="sinhaLPS_CVPR2014_supp.pdf">[supplementary pdf]</a>
+                        <br><br>
+                        <font size="4"><b>Abstract</b></font>
+                        <br>
+                        We present a stereo algorithm designed for speed and efficiency that uses local slanted plane sweeps to propose disparity hypotheses for a semi-global matching algorithm. Our local plane hypotheses are derived from initial sparse feature correspondences followed by an iterative clustering step. Local plane sweeps are then performed around each slanted plane to produce out-of-plane parallax and matching-cost estimates. A final global optimization stage, implemented using semi-global matching, assigns each pixel to one of the local plane hypotheses. By only exploring a small fraction of the whole disparity space volume, our technique achieves significant speedups over previous algorithms and achieves state-of-the-art accuracy on high-resolution stereo pairs of up to 19 megapixels.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </center>
+</body>
+</html>

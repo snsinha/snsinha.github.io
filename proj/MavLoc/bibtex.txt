@@ -1,0 +1,8 @@
+@inproceedings {LS-ICRA15,
+    author = "Hyon Lim and Sudipta N. Sinha",
+    title = "Multiple View Object Cosegmentation using Appearance and Stereo Cues",
+    booktitle = "IEEE International Conference on Robotics and Automation (ICRA)",
+    location = "Seattle, WA",
+    month = "May",
+    year = "2015",
+}

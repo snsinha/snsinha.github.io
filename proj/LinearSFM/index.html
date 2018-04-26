@@ -1,0 +1,106 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <title>A multi-stage linear approach to structure from motion</title>
+    <link href="Deep%20Photo%20Model-Based%20Photograph%20Enhancement%20and%20Viewing_files/style.css"
+        type="text/css" rel="StyleSheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <meta content="MSHTML 6.00.2900.2180" name="GENERATOR">
+    <meta content="Sudipta N. Sinha" name="author">
+    <meta content="Computer Vision, Computer Graphics" name="description">
+</head>
+<body>
+    <center>
+        <br>
+        <table>
+            <tbody>
+                <tr align="center">
+                </tr>
+                <tr>
+                    <td colspan="99" align="center">
+                        <h4>
+                            To appear at RMLE 2010 ECCV-workshop</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="99" align="center">
+                        <h3>
+                            A multi-stage linear approach to structure from motion<br>
+                        </h3>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <tr>
+                <td align='center'>
+                    <h4>
+                        <a href='http://research.microsoft.com/~sudipsin' target='new'>Sudipta N. Sinha</a><br>
+                    Microsoft Research
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;
+                </td>
+                <td align='center'>
+                    <h4>
+                        <a href='http://research.microsoft.com/~steedly' target='new'>Drew Steedly</a><br>
+                    Microsoft
+                </td>
+                <td>
+                    &nbsp;&nbsp;&nbsp;
+                </td>
+                <td align='center'>
+                    <h4>
+                        <a href='http://research.microsoft.com/~szeliski/' target='new'>Richard Szeliski</a><br>
+                    Microsoft Research
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tbody>
+                <tr>
+                    <td align="center">
+                        <a href="sinhaRMLE10_linearSfm.pdf"><img border="none" style="width: 500px; height: 350px;" src="index_files/linearSfm.png"></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <tbody>
+                <tr>
+                    <td style="text-align: justify;" valign="top" width="640">
+                        <a href="sinhaRMLE10_linearSfm.pdf">[pdf]</a>
+                        <br><br>
+                        <a href="s/index.html">[supplementary page]</a>
+                        <br><br>
+                        <font size="4"><b>Abstract</b></font>
+                        <br>
+                        We present a new structure from motion (Sfm) technique based on point and vanishing
+                        point (VP) matches in images. First, all global camera rotations are computed from
+                        VP matches as well as relative rotation estimates obtained from pairwise image matches.
+                        A new multi-staged linear technique is then used to estimate all camera translations
+                        and 3D points simultaneously. The proposed method involves first performing pairwise
+                        reconstructions, then robustly aligning these in pairs, and finally aligning all
+                        of them globally by simultaneously estimating their unknown relative scales and
+                        translations. In doing so, measurements inconsistent in three views are efficiently
+                        removed.
+                        <br><br>
+                        Unlike sequential Sfm, the proposed method treats all images equally, is easy to
+                        parallelize and does not require intermediate bundle adjustments. There is also
+                        a reduction of drift and significant speedups up to tw orders of magnitude over
+                        sequential Sfm. We compare our method with a standard Sfm pipeline [1] and
+                        demonstrate that our linear estimates are accurate on a variety of datasets, and
+                        can serve as good initializations for final bundle adjustment. Because we exploit
+                        VPs when available, our approach is particularly well-suited to the reconstruction
+                        of man-made scenes.
+                        
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <script language="JavaScript" src="Deep%20Photo%20Model-Based%20Photograph%20Enhancement%20and%20Viewing_files/record.htm"
+            type="text/javascript"></script>
+    </center>
+</body>
+</html>
