@@ -1,0 +1,187 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<title>Structure from motion for scenes with large duplicate structures</title>
+
+  
+  <link href="index_files/style.htm" type="text/css" rel="StyleSheet">
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta content="MSHTML 6.00.2900.2180" name="GENERATOR">
+  <meta content="Sudipta N. Sinha" name="author">
+  <meta content="Computer Vision, Computer Graphics" name="description"></head><body>
+<center><br>
+<table>
+  <tbody>
+    <tr align="center">
+      <td colspan="99">
+      <h5><a href="http://research.microsoft.com/en-us/groups/interactivevisualmedia">Back to publications page</a></h5>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="99" align="center">
+      <h4>CVPR 2011</h4>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="99" align="center">
+      <h1>Structure from motion for scenes with large duplicate structures<br>
+      </h1>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+<tbody><tr>
+	<td align="center"><h4>
+		<a href="http://www.cc.gatech.edu/~richard/" target="new">Richard Roberts</a><br>
+		Georgia Institute of Technology,<br> Atlanta
+	</h4></td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td align="center"><h4>
+		<a href="http://research.microsoft.com/en-us/um/people/sudipsin" target="new">Sudipta N. Sinha</a><br>
+		Microsoft Research,<br> Redmond
+	</h4></td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td align="center"><h4>
+		<a href="http://research.microsoft.com/en-us/um/people/szeliski/" target="new">Richard Szeliski</a><br>
+		Microsoft Research,<br> Redmond
+	</h4></td>
+	<td>&nbsp;&nbsp;&nbsp;</td>
+	<td align="center"><h4>
+		<a href="http://research.microsoft.com/%7Esteedly/" target="new">Drew Steedly</a><br>
+		Microsoft,<br> Redmond
+	</h4></td>
+</tr>
+</tbody></table>
+
+<br>
+
+
+<table>
+  <tbody>
+    <tr>
+<!-- style="width: 1234px; height: 269px;" -->
+      <td align="center"><img style="width: 900px;" src="images/overview.jpg" alt="Overview"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">
+        <div style="width: 580px; text-align:left; margin-left:auto; margin-right:auto; padding:0;">
+        <big>
+          <div style="width: 35px; float:left; clear:both; margin:0; padding:0;">(a)</div>
+          <div style="width: 544px; float:left; margin:0; padding:0;">
+            Duplicate structures present in the scene.</div>
+          <div style="width: 35px; float:left; clear:both; margin:0; padding:0;">(b)</div>
+          <div style="width: 544px; float:left; margin:0; padding:0;">
+            A standard structure from motion (Sfm) pipeline folds both instances into one in reconstruction.</div>
+          <div style="width: 35px; float:left; clear:both; margin:0; padding:0;">(c)</div>
+          <div style="width: 544px; float:left; margin:0; padding:0;">
+	    Our method infers the erroneous inter-instance matches (shown in red in the match graph adjacency matrix) and discards them.</div>
+          <div style="width: 35px; float:left; clear:both; margin:0; padding:0;">(d)</div>
+          <div style="width: 544px; float:left; margin:0; padding:0;">
+            This produces an accurate reconstruction.</div></big>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<table>
+  <tbody>
+    <tr>
+      <td style="text-align: justify;" width="500px" valign="top"><font size="6"><b>Abstract</b></font><br>
+Most existing structure from motion (SFM) approaches
+for unordered images cannot handle multiple instances of
+the same structure in the scene. When image pairs containing
+different instances are matched based on visual similarity,
+the pairwise geometric relations as well as the correspondences
+inferred from such pairs are erroneous, which
+can lead to catastrophic failures in the reconstruction.
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;In this paper, we investigate the geometric ambiguities
+caused by the presence of repeated or duplicate structures
+and show that to disambiguate between multiple hypotheses
+requires more than pure geometric reasoning. We couple
+an expectation maximization (EM)-based algorithm that
+estimates camera poses and identifies the false match-pairs
+with an efficient sampling method to discover plausible data
+association hypotheses. The sampling method is informed
+by geometric and image-based cues. Our algorithm usually
+recovers the correct data association, even in the presence
+of large numbers of false pairwise matches.
+      <br>
+	  <br>
+	  
+	  <img alt="datasets" src="images/new.jpg" style="border: 0px solid; width: 40px; height: 40px;">
+<br>
+
+<font size="5"><b>Datasets</b></font>
+<br>
+
+The image sequences are now available for download.
+<br>
+<b><a href="https://research.microsoft.com/~sudipsin/datasets/dupSfm/group1.zip">group1.zip (bldg, street)</a>
+<br>
+<b><a href="https://research.microsoft.com/~sudipsin/datasets/dupSfm/group2.zip">group2.zip (books, cereal, cup)</a>
+<br>
+<b><a href="https://research.microsoft.com/~sudipsin/datasets/dupSfm/group3.zip">group3.zip (desk, oats)</a>
+<br>
+<br>
+	  <pre>
+@inproceedings {ROBERTS-CVPR11,
+    key = "Roberts",
+    author = "Richard Roberts and Sudipta N. Sinha and
+              Richard Szeliski and Drew Steedly",
+    title = "Structure from motion for scenes with large
+             duplicate structures ",
+    booktitle = "IEEE Computer Society Conference on Computer
+                 Vision and Pattern Recognition (CVPR 2011)",
+    location = "Fort Collins, CO",
+    month = "June",
+    year = "2011",
+    pubid = "147401",
+    keywords = "structure from motion, duplicate structures",
+    bibdate = "Wed Apr  6 17:34:27  2011"
+}
+</pre>
+      </td>
+      <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+      <td align="right" valign="top" width="248">
+      <table cellpadding="5px">
+        <tbody>
+          <tr>
+            <td height="40px"></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><a href="paper/robertsCVPR2011.pdf"><img alt="paper" src="images/icon_paper.png" style="border: 0px solid; width: 104px; height: 133px;"></a><br>
+             </td>
+            <td><b><a href="paper/robertsCVPR2011.pdf">paper</a><br>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="supp/index.html"><img alt="supplementary page" src="images/icon_supp.png" style="border: 0px solid; width: 104px; height: 73px;"></a><br>
+             </td>
+            <td> <a href="supp/index.html">Supplementary Material</a> </td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="99" align="center">
+      <h5><a href="http://research.microsoft.com/en-us/groups/interactivevisualmedia">Back to publications page</a></h5>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<script language="JavaScript" src="index_files/record.htm" type="text/javascript"></script>
+</center>
+</body></html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Paper ID 991 - CVPR 2011 Supplementary Material</title>
+
+  
+  
+  <style type="text/css">
+
+  </style>
+  
+  <link title="style" rel="stylesheet" href="style.css" type="text/css">
+
+</head><body>
+<h1 style="text-align: center;">Structure from Motion for Scenes with<br>
+Large Duplicate Structures</h1>
+
+<h3 style="text-align: center;">Paper ID 991</h3>
+
+<p>This is the index page &#8211; all supplementary material, comprising a
+more detailed algorithm derivation and additional results included for
+completeness, may be reached from this page.</p>
+
+<h2>Derivation of Consistent Majority Optimization</h2>
+
+<p>[ <a href="EM_derivation.pdf">PDF</a> ] In this document we provide
+a full derivation of the EM algorithm presented in Section 3 of the
+main paper.</p>
+
+<h2>Additional Results<br>
+</h2>
+
+<p>In this section we demonstrate results on several data sets that we
+could not include in the paper due to space constraints, and provide
+high-resolution images and videos for those in the paper.&nbsp;
+Additionally, for readers interested in a comparison with the
+open-source <a href="http://phototour.cs.washington.edu/bundler/">Bundler
+pipeline</a> [<a href="#references">citation</a>] on these datasets, we include this for the
+sake of completeness.&nbsp; In the main paper, we instead compare with
+a proprietary pipeline that generally performs as well as or better
+than Bundler on these datasets.</p>
+
+<p>Click on images to open high-resolution versions.<br>
+</p>
+
+<div class="result">
+<h3>HOUSE</h3>
+<div class="floatleft">
+<a href="house/input.jpg"><img src="house/input.jpg" alt="" style="border: 0px solid ; width: 300px; height: 201px;"></a>
+<p>Sample input images</p>
+</div>
+<div class="floatleft">
+<a href="house/ourRecon.png"><img style="border: 0px solid ; width: 507px; height: 230px;" alt="" src="house/ourRecon.png"></a>
+<p>Reconstruction of our method</p>
+</div>
+<div class="floatleft">
+<a href="house/baselineRecon.png"><img style="border: 0px solid ; width: 227px; height: 230px;" alt="" src="house/baselineRecon.png"></a>
+<p>Reconstruction of comparison pipeline</p>
+</div>
+<div class="floatleft">
+<a href="house/bundlerRecon.png"><img style="border: 0px solid ; width: 227px; height: 230px;" alt="" src="house/bundlerRecon.png"></a>
+<p>Reconstruction of Bundler</p>
+</div>
+<div class="clearer">&nbsp;</div>
+</div>
+
+<div class="result">
+<h3>BLDG</h3>
+<div class="floatleft">
+<a href="bldg/input.jpg"><img style="border: 0px solid ; width: 402px; height: 150px;" alt="" src="bldg/input.jpg"></a>
+<p>Sample input images</p>
+</div>
+<div class="floatleft">
+<a href="bldg/ourRecon.png"><img style="border: 0px solid ; width: 482px; height: 200px;" alt="" src="bldg/ourRecon.png"></a>
+<p style="width: 482px;">Reconstruction of our method and of comparison
+pipeline (both were
+successful)</p>
+</div>
+<div class="floatleft">
+<a href="bldg/bundlerRecon.png"><img style="border: 0px solid ; width: 410px; height: 200px;" alt="" src="bldg/bundlerRecon.png"></a>
+<p>Reconstruction of Bundler</p>
+</div>
+<div class="clearer">&nbsp;</div>
+</div>
+
+<div class="result">
+<h3>BOOKS</h3>
+<div class="floatleft">
+<a href="books/input.jpg"><img style="border: 0px solid ; width: 350px; height: 87px;" alt="" src="books/input.jpg"></a>
+<p>Sample input images</p>
+</div>
+<div class="floatleft">
+<a href="books/ourReconTriplets.png"><img style="border: 0px solid ; width: 300px;" alt="" src="books/ourReconTriplets.png"></a>
+<p>Reconstruction of our method</p>
+</div>
+<div class="floatleft">
+<a href="books/baselineRecon.png"><img style="border: 0px solid ; width: 300px;" alt="" src="books/baselineRecon.png"></a>
+<p>Reconstruction of comparison pipeline</p>
+</div>
+<div class="floatleft">
+<a href="books/bundlerRecon.png"><img style="border: 0px solid ; width: 300px;" alt="" src="books/bundlerRecon.png"></a>
+<p>Reconstruction of Bundler</p>
+</div>
+<div class="clearer">&nbsp;</div>
+</div>
+
+<div class="result">
+<h3>BOXES</h3>
+<div class="floatleft">
+<a href="boxes/input.jpg"><img style="border: 0px solid ; width: 300px;" alt="" src="boxes/input.jpg"></a>
+<p>Sample input images</p>
+</div>
+<div class="floatleft">
+<a href="boxes/ourRecon.png"><img style="border: 0px solid ; width: 300px;" alt="" src="boxes/ourRecon.png"></a>
+<p>Reconstruction of our method</p>
+</div>
+<div class="floatleft">
+<a href="boxes/baselineRecon.png"><img style="border: 0px solid ; width: 300px;" alt="" src="boxes/baselineRecon.png"></a>
+<p>Reconstruction of comparison pipeline</p>
+</div>
+<div class="floatleft">
+<a href="boxes/bundlerRecon.png"><img style="border: 0px solid ; width: 300px;" alt="" src="boxes/bundlerRecon.png"></a>
+<p>Reconstruction of Bundler</p>
+</div>
+<div class="clearer">&nbsp;</div>
+</div>
+
+<div class="result">
+<h3>CUP</h3>
+<div class="floatleft">
+<a href="cup/input.jpg"><img style="border: 0px solid ; width: 300px;" alt="" src="cup/input.jpg"></a>
+<p>Sample input images</p>
+</div>
+<div class="floatleft">
+<a href="cup/ourRecon.png"><img style="border: 0px solid ; width: 300px;" alt="" src="cup/ourRecon.png"></a>
+<p>Reconstruction of our method</p>
+</div>
+<div class="floatleft">
+<a href="cup/baselineRecon.png"><img style="border: 0px solid ; width: 300px;" alt="" src="cup/baselineRecon.png"></a>
+<p>Reconstruction of comparison pipeline</p>
+</div>
+<div class="floatleft">
+<a href="cup/bundlerRecon.png"><img style="border: 0px solid ; width: 300px;" alt="" src="cup/bundlerRecon.png"></a>
+<p>Reconstruction of Bundler</p>
+</div>
+<div class="clearer">&nbsp;</div>
+</div>
+
+<div class="result">
+<h3>DESK</h3>
+<div class="floatleft">
+<a href="desk/input.jpg"><img style="border: 0px solid ; width: 342px; height: 85px;" alt="" src="desk/input.jpg"></a>
+<p>Sample input images</p>
+</div>
+<div class="floatleft">
+<a href="desk/ourReconTriplets.png"><img style="border: 0px solid ; width: 300px;" alt="" src="desk/ourReconTriplets.png"></a>
+<p>Reconstruction of our method</p>
+</div>
+<div class="floatleft">
+<a href="desk/baselineRecon.png"><img style="border: 0px solid ; width: 300px;" alt="" src="desk/baselineRecon.png"></a>
+<p>Reconstruction of comparison pipeline</p>
+</div>
+<div class="floatleft">
+<a href="desk/bundlerRecon.png"><img style="border: 0px solid ; width: 300px;" alt="" src="desk/bundlerRecon.png"></a>
+<p>Reconstruction of Bundler</p>
+</div>
+<div class="clearer">&nbsp;</div>
+</div>
+
+<div class="result">
+<h3>OATS</h3>
+<div class="floatleft">
+<a href="oats/input.jpg"><img style="border: 0px solid ; width: 300px;" alt="" src="oats/input.jpg"></a>
+<p>Sample input images</p>
+</div>
+<div class="floatleft">
+<a href="oats/ourReconTriplets.png"><img style="border: 0px solid ; width: 300px;" alt="" src="oats/ourReconTriplets.png"></a>
+<p>Reconstruction of our method</p>
+</div>
+<div class="floatleft">
+<a href="oats/baselineRecon.png"><img style="border: 0px solid ; width: 300px;" alt="" src="oats/baselineRecon.png"></a>
+<p>Reconstruction of comparison pipeline</p>
+</div>
+<div class="floatleft">
+<a href="oats/bundlerRecon.png"><img style="border: 0px solid ; width: 300px;" alt="" src="oats/bundlerRecon.png"></a>
+<p>Reconstruction of Bundler</p>
+</div>
+<div class="clearer">&nbsp;</div>
+</div>
+
+<h2><a name="references"></a>References</h2>
+Noah Snavely, Steven M. Seitz, Richard Szeliski. <a href="http://phototour.cs.washington.edu/Photo_Tourism.pdf">Photo Tourism: Exploring image collections in 3D</a>. <span style="font-style: italic;">ACM Transactions on Graphics (Proceedings of SIGGRAPH 2006)</span>, 2006.<br>
+<br>
+Noah Snavely, Steven M. Seitz, Richard Szeliski. <a href="http://phototour.cs.washington.edu/ModelingTheWorld_ijcv07.pdf">Modeling the World from Internet Photo Collections</a>. <span style="font-style: italic;">International Journal of Computer Vision</span>, 2007. <br>
+<br>
+
+</body></html>
