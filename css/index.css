@@ -152,10 +152,24 @@ p{
 }
 
 .paperheading{
-	
 	font-weight: bold;
 	font-size: 100%;	
-	margin-bottom: -0px;	
+	display: block;
+	margin-bottom: 1px;	
+}
+
+.authors{
+	font-weight: normal;
+	font-size: 90%;	
+	display: block;	
+	margin-bottom: 1px;
+}
+
+.booktitle{
+	font-weight: normal;
+	font-size: 100%;	
+	display: block;	
+	margin-bottom: 1px;
 }
 .ph{
 	text-align: left;
@@ -227,7 +241,7 @@ h5{
 .tdb, .thb{
 	border:  thin dotted gray;
 	padding:  5px;
-		font-size:  80%;
+	font-size:  80%;
 }
 
 .captionb {
@@ -244,7 +258,7 @@ h5{
 td, th{
 	border:  thin dotted white;
 	padding:  5px;
-		font-size:  100%;
+	font-size:  100%;
 }
 
 caption {
