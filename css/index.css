@@ -48,7 +48,6 @@ a:hover{
 	background-color:#FFFFFF;
 	font-family: "Segoe UI", Verdana;
 	margin: 0 auto;
-	text-align: justify;
 }
 
 #footer-box {
@@ -180,7 +179,6 @@ p{
 
 .ph2{
 	margin-right: 100px;
-	text-align: justify;
 	font-size:  100%;
 	border-bottom:  thin dotted #888888;
 	margin-bottom: 10px	
