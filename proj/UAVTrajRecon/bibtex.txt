@@ -1,6 +1,0 @@
-@inproceedings{RSDF-CVPR2017,
-  title={Flight dynamics-based recovery of a uav trajectory using ground cameras},
-  author={Rozantsev, Artem and Sinha, Sudipta N and Dey, Debadeepta and Fua, Pascal},
-  booktitle={Conf. Comp. Vision and Pattern Recognition},
-  year={2017}
-}
